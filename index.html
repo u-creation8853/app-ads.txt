@@ -7,55 +7,75 @@
 	
 
 	<style>
-		.message .container{
-    max-width:500px;
+/* container */
+.wrapper{
+    width:100%;
+    background-color:#fafafa;
+}
+.wrapper .container{
+    max-width:1000px;
     margin:0px auto;
     padding:80px 0px;
 }
-		h1 {
+/* content */
+@media (min-width: 992px) {
+    .wrapper .container .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* PC時のみ順番を入れ替える */
+@media (min-width: 992px) {
+    .wrapper .content {
+        flex-direction:row-reverse;
+    }
+}
+.wrapper .content-item {
+    width:100%;
+}
+@media (min-width: 992px) {
+    .wrapper .content-item {
+        width:50%;
+    }
+}
+.wrapper .image{
+    display:block;
+    max-width:100%;
+    margin:0px auto;
+}
+.wrapper .text{
+    padding:50px;
+}
+.wrapper .text .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
     font-weight: normal;
-    padding-bottom: 10px;
     text-align: center;
-    position: relative;
-    margin: 0 0 30px 0;
-    letter-spacing: 5px;
 }
-		p {
-    width: 50%;
-    line-height: 2;
-    display: inline-block;
-    background-color: #03A9F4;
-    padding: 20px;
-    text-align: center;			
-    position: relative;
-    z-index: 999;
-    margin: 50px 0 0;
-    color: #fff;
-    letter-spacing: 2px;
-}
-		img {
-    height: 300px;
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-    right: 30px;
-}
-	
 	</style>	
 </head>
 <body>
-	<section class="message">
+	<section class="wrapper">
     <div class="container">
         <div class="content">
-            <!-- ここにHTMLを書き込みます -->
-　　　　<h1>U-CREATION</h1>
-	<p>androidのアプリを企画・製作しています。現在の主軸はツール系ですが、これからゲームアプリも作っていきたいと思っています。</p>
-	<img src="182.jpg" alt="">
-	<a href="https://play.google.com/store/apps/details?id=com.u_creation.BatteryManager&hl=ja&gl=US">Google Playストアの掲載ページはこちら</a>
+            <div class="content-item">
+                <img src="182.jpg" class="image">
+            </div>    
+            <div class="content-item">
+                <div class="text">
+                    <h2 class="heading">U-CREATION</h2>
+                    <p>Androidのアプリを企画・製作しています。現在の主軸はツール系ですが、これからゲームアプリも作っていきたいと思っています。</p>
+		    <a href="https://play.google.com/store/apps/details?id=com.u_creation.BatteryManager&hl=ja&gl=US">Google Playストアの掲載ページはこちら</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<!-- // MESSAGE -->
+	
+	
+	
+	
 	
 	
 	
